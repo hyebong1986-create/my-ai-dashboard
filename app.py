@@ -3,9 +3,8 @@ from google import genai
 from PIL import Image
 import io
 
-# 1. 금고 안에서 'GEMINI_API_KEY'라는 이름의 열쇠를 정확히 꺼내옵니다.
-# (이 부분이 수정되었습니다!)
-api_key = st.secrets
+# 금고 안에서 'GEMINI_API_KEY'라는 이름의 내용물만 쏙 빼옵니다.
+api_key = st.secrets 
 client = genai.Client(api_key=api_key)
 
 # 2. 대시보드 화면 꾸미기
